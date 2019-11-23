@@ -3,6 +3,8 @@
     line 577-580
 
 * uCOS-II/Source/os_core.c
+    line 935
+    line 977
     line 2017-2023
 
 * Evalboards/Microsoft/Windows/OS2/app.c
