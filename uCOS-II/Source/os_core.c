@@ -1750,13 +1750,13 @@ static  void  OS_SchedNew (void)
                 if (ptr_current->OSTCBDeadline < mostUrgentDeadline) {
                     mostUrgentPriority = ptr_current->OSTCBPrio;
                     mostUrgentDeadline = ptr_current->OSTCBDeadline;
+                    // Select a task with the closest deadline
                 }
             }
         }
     }
 
     OSPrioHighRdy = mostUrgentPriority;
-    // Select a task with the closest deadline
 
 #elif Scheduling == RM                       /* See if we support up to 64 tasks                   */
     INT32S mostUrgentPeriod = 0x7FFFFFFF;
@@ -1777,6 +1777,7 @@ static  void  OS_SchedNew (void)
                 if (ptr_current->OSTCBDeadline < mostUrgentPeriod) {
                     mostUrgentPriority = ptr_current->OSTCBPrio;
                     mostUrgentPeriod = ptr_current->OSTCBPeriod;
+                    // Select a task with the closest period
                 }
             }
         }

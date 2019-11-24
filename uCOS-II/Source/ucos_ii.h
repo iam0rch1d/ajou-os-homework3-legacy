@@ -573,7 +573,7 @@ typedef struct os_tcb {
     INT16U           OSTCBId;               /* Task ID (0..65535)                                      */
 #endif
 
-	INT32S OSTCBPeriod;
+    INT32S OSTCBPeriod;
     INT32S OSTCBDeadline;
     INT32S OSTCBProcessingTime;
     INT32S OSTCBTotalProcessingTime;
