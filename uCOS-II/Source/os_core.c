@@ -1513,7 +1513,6 @@ static  void  OS_InitTaskStat (void)
 #if OS_TASK_CREATE_EXT_EN > 0u
     #if OS_STK_GROWTH == 1u
 	
-	//Modification here
 	INT16U args[] = { 0, 0 };
 
     (void)OSTaskCreateExt(OS_TaskStat,
